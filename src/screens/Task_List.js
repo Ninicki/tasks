@@ -1,18 +1,31 @@
 import React, {Components} from "react"
-import {StyleSheets, View, Text} from "react-native"
+import {StyleSheet, View, Text, ImageBackground} from "react-native"
+
+import today_Image from "../../assets/imgs/today.jpg"
 
 export default class TaskList extends Component{
     render(){
         return(
-            <viwe>
-                <text>Lista de Tarefas</text>
-            </viwe>
+            <View style={styles.container}>
+                <ImageBackground source={today_Image} style={styles.background}>
+
+                </ImageBackground>
+                <View style={styles.taskList}>
+
+                </View>
+            </View>
         )
     }
 }
 
-const styles = StyleSheets.create({
+const styles = StyleSheet.create({
     container: {
         flex: 1
+    },
+    background:{
+        flex: 3
+    },
+    taskList:{
+        flex: 7
     }
 })
